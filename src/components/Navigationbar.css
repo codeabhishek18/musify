@@ -19,6 +19,7 @@
 .logo
 {
     height: 36px;
+    width: 67px;
 }
 
 .searchbar
@@ -34,7 +35,7 @@
     width: 568px;
     font-size: 12px;
     border-radius: 8px 0px 0px 8px;
-    border:none;
+    border:1px solid black;
 }
 
 .img-span
@@ -46,11 +47,14 @@
     justify-content: center;
     background-color: white;
     border-radius: 0px 8px 8px 0px;
+    border:1px solid black;
+    border-left:none;
 }
 
 .img-span img
 {
     height:15px;
+    cursor: pointer;
 }
 
 .feedback-btn
