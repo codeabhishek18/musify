@@ -3,16 +3,10 @@
     height:74px;
     display: flex;
     justify-content: space-between;
-    background-color: #34C94B;
+    background-color: var(--primary-color);
     align-items: center;
     padding-left: 32px;
     padding-right: 32px;
-}
-
-.logo
-{
-    height: 36px;
-    width: 67px;
 }
 
 .searchbar
@@ -52,8 +46,8 @@
 
 .feedback
 {
-    background-color: black;
-    color: #34C94B;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
     border: none;
     height:27px;
     width: 110px;
