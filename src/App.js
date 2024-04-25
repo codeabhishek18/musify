@@ -11,4 +11,3 @@ function App() {
 
 export default App;
 
-//token: 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
