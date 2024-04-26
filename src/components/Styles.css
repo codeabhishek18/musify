@@ -59,3 +59,26 @@
     padding-right: 4px;
     cursor: pointer;
 }
+
+.hero-div
+{
+    height: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 32px;
+    background-color: black;
+}
+
+.hero-div img
+{
+    height:212px;
+    aspect-ratio: 1/1;
+}
+
+.hero-content
+{
+    font-size: 32px;
+    font-weight: 600;
+    color: white;
+}
