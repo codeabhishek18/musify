@@ -3,7 +3,11 @@ import "../Styles.css"
 
 const Logo = () =>
 {
-    return <img className="logo" src={logo} alt="logo"/>
+    return(
+        <div className="logo">
+            <img src={logo} alt="logo"/>
+        </div>
+    )
 }
 
 export default Logo;
