@@ -5,8 +5,11 @@
     justify-content: space-between;
     background-color: var(--primary-color);
     align-items: center;
-    padding-left: 32px;
-    padding-right: 32px;
+}
+
+.logo
+{
+    margin-left:4px;
 }
 
 .searchbar
@@ -41,7 +44,6 @@
 .img-span img
 {
     height:15px;
-    cursor: pointer;
 }
 
 .feedback
@@ -52,4 +54,5 @@
     height:27px;
     width: 110px;
     border-radius: 8px;
+    cursor: pointer;
 }
