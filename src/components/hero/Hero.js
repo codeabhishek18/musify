@@ -6,7 +6,7 @@ const Hero = () =>
     return(
         <div className="hero-div">
             <div className="hero-content">
-                <p>100 Thousands Songs, ad-free</p>
+                <p>100 Thousand Songs, ad-free</p>
                 <p>Over thousands podcast episodes</p>
             </div>
             <img src={hero} alt="hero-image"/>
@@ -14,3 +14,4 @@ const Hero = () =>
     )
 }
 export default Hero;
+
