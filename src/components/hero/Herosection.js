@@ -1,7 +1,7 @@
 import '../Styles.css';
 import hero from '../../assets/hero-image.png';
 
-const Hero = () =>
+const Herosection = () =>
 {
     return(
         <div className="hero-div">
@@ -10,5 +10,5 @@ const Hero = () =>
         </div>
     )
 }
-export default Hero;
+export default Herosection;
 
