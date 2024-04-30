@@ -5,10 +5,7 @@ const Hero = () =>
 {
     return(
         <div className="hero-div">
-            <div className="hero-content">
-                <h1>100 Thousand Songs, ad-free</h1>
-                <h1>Over thousands podcast episodes</h1>
-            </div>
+            <h1>100 Thousand Songs, ad-free Over thousands podcast episodes</h1>
             <img src={hero} alt="hero-image"/>
         </div>
     )
