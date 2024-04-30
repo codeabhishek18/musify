@@ -6,8 +6,8 @@ const Hero = () =>
     return(
         <div className="hero-div">
             <div className="hero-content">
-                <p>100 Thousand Songs, ad-free</p>
-                <p>Over thousands podcast episodes</p>
+                <h1>100 Thousand Songs, ad-free</h1>
+                <h1>Over thousands podcast episodes</h1>
             </div>
             <img src={hero} alt="hero-image"/>
         </div>

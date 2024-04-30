@@ -1,5 +1,6 @@
 .navbar
 {
+    width: 100vw;
     height:74px;
     display: flex;
     justify-content: space-between;
@@ -21,6 +22,7 @@
 
 .searchbar input
 {
+    margin-top: 0;
     padding-left: 10px;
     height: 36px;
     width: 400px;
@@ -62,6 +64,7 @@
 
 .hero-div
 {
+    width: 100vw;
     height: 270px;
     display: flex;
     justify-content: center;
@@ -83,4 +86,209 @@
     font-size: 32px;
     font-weight: 600;
     color: white;
+}
+
+.container
+{
+    color: white;
+    margin: 0 30px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.swiper
+{
+    margin: 0 15px;
+}
+
+.card 
+{
+    height: 200px;
+    width: 160px;
+}
+
+.card-image
+{
+    object-fit:cover;
+    height: 80%;
+    width: 100%;
+}
+
+.card-image img
+{
+    
+    border-radius: 8px 8px 0 0;
+    height: 100%;
+    width: 100%;
+}
+
+.card-header
+{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.card-header span
+{
+    color: var(--primary-color);
+}
+
+.card-content
+{
+    background: white;
+    padding: 5px;
+    border-radius: 0 0 8px 8px;
+}
+
+.card-content button
+{
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 2px;
+    padding-left: 5px;
+    font-size: 10px;
+}
+
+.navigation
+{
+    position: absolute;
+    background: none;
+    border: 0;
+    height: 32px;
+    aspect-ratio: 1/1;
+    z-index: 2;
+    top:50%;
+    transform: translateY(-50%);
+    background-color: white;
+    border-radius: 50%;
+}
+
+.prev
+{
+    left:0px;
+}
+
+.next
+{
+    right:0px;
+}
+
+.title
+{
+    font-size: 10px;
+    margin-top: 5px;
+}
+
+.qa-container
+{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.qa
+{
+    margin-top: 15px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.que
+{
+    width: 60vw;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.que button
+{
+    background: none;
+    border: 0;
+}
+
+.ans
+{
+    padding: 15px;
+    color: black;
+}
+
+.open
+{
+    display: block;
+}
+
+.close
+{
+    display: none;
+}
+
+.form
+{
+    position: fixed;
+    left:0px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 3;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border-radius: 10px;
+    width: 350px;
+    backdrop-filter: blur(5px);
+    
+}
+
+.form p
+{
+    font-weight: 600;
+    position: relative;
+}
+
+.form button
+{
+    margin-top: 20px;
+    color:white;
+    padding: 5px;
+    background-color: var(--primary-color) ;
+    border-radius: 5px ;
+    border:0;
+}
+
+input
+{
+    width: 90%;
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+.form span
+{
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.desc
+{
+    padding-bottom: 50px;
 }
