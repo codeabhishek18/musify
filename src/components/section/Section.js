@@ -25,7 +25,7 @@ export const genres = [
     }
 ]
 
-const Section = ({ title, data, type, setGenre}) =>
+const Section = ({ title, data = [], type, setGenre}) =>
 {
     const [collapse, setCollapse] = useState(false);
     const [currentActive, setCurrentActive] = useState(1);
@@ -48,9 +48,9 @@ const Section = ({ title, data, type, setGenre}) =>
                     </div>
                 ))}
             </div>}
-            {!collapse && <button className="prev navigation"><img src={prev} alt="prev"/></button>}
-            {!collapse && <button className="next navigation"><img src={next} alt="next"/></button>}
-            <div className={collapse ?  'collapse-cards' :'scroll-cards'}>
+            {/* {!collapse && <button className="prev navigation"><img src={prev} alt="prev"/></button>}
+            {!collapse && <button className="next navigation"><img src={next} alt="next"/></button>} */}
+            <div className='collapse-cards'>
             {data?.map((card)=>
             (
                 <div>
@@ -67,7 +67,7 @@ const Section = ({ title, data, type, setGenre}) =>
                 </div>
             ))}
             </div>
-            <div className="hr"></div>
+            {/* <div className="hr"></div> */}
         </div>
     )
 }

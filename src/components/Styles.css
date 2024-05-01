@@ -86,7 +86,7 @@
 
 .container
 {
-    margin: 0 30px;
+    padding: 0 30px;
     color: white;
     margin-bottom: 20px;
     position: relative;
@@ -102,7 +102,6 @@
 
 .collapse-cards
 {
-    margin: 0 20px;
     display: flex;
     flex-wrap: wrap;
     column-gap: 32px;
@@ -113,7 +112,6 @@
 {
     display: flex;
     overflow-x: hidden;
-    margin: 0 20px;
     column-gap: 32px;    
 }
 
