@@ -44,7 +44,7 @@ const FAQ = () =>
                     </div>
                 </div>
             ))}
-            <div className="hr"></div>
+            {/* <div className="hr"></div> */}
         </div>
     )
 }

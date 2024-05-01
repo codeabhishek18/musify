@@ -44,8 +44,8 @@ const Cards= () =>
     return(
         <div>
            <Section title="Top Albums" data={topSongs} type="album"/>
-           {/* <Section title="New Albums" data={newSongs} type="album"/>
-           <Section title="Songs" data={filteredGenre} type="song" setGenre={setGenre}/> */}
+           <Section title="New Albums" data={newSongs} type="album"/>
+           {/* <Section title="Songs" data={filteredGenre} type="song" setGenre={setGenre}/> */}
         </div>
     )
 }
