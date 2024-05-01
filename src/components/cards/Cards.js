@@ -5,7 +5,7 @@ import Section from "../section/Section";
 const Cards= () =>
 {
     const [topSongs, setTopSongs] = useState([]);
-    // const [newSongs, setNewSongs] = useState([]);
+    const [newSongs, setNewSongs] = useState([]);
     // const [songs, setSongs] = useState([]);
     // const [genre, setGenre] = useState('All');
 
@@ -16,12 +16,12 @@ const Cards= () =>
         setTopSongs(response.data);
     }
 
-    // const getNewAlbums = async () =>
-    // {
-    //     const url = "https://qtify-backend-labs.crio.do/albums/new";
-    //     const response = await axios.get(url);
-    //     setNewSongs(response.data);
-    // }
+    const getNewAlbums = async () =>
+    {
+        const url = "https://qtify-backend-labs.crio.do/albums/new";
+        const response = await axios.get(url);
+        setNewSongs(response.data);
+    }
 
     // const getSongs = async () =>
     // {
@@ -33,7 +33,7 @@ const Cards= () =>
     useEffect(() =>
     {
         getTopAlbums();
-        // getNewAlbums();
+        getNewAlbums();
         // getSongs();
     },[])
 
@@ -42,7 +42,7 @@ const Cards= () =>
     return(
         <div>
            <Section title="Top Albums" data={topSongs} type="album"/>
-           {/* <Section title="New Albums" data={newSongs} type="album"/> */}
+           <Section title="New Albums" data={newSongs} type="album"/>
            {/* <Section title="Songs" data={filteredGenre} type="song" setGenre={setGenre}/> */}
         </div>
     )
