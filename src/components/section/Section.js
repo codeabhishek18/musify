@@ -27,7 +27,7 @@ export const genres = [
 
 const Section = ({ title, data = [], type, setGenre}) =>
 {
-    const [collapse, setCollapse] = useState(false);
+    const [collapse, setCollapse] = useState(true);
     const [currentActive, setCurrentActive] = useState(1);
     return(
         <div className="container">
