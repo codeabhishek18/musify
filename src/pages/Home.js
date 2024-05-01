@@ -1,4 +1,4 @@
-import Caroussel from "../components/caroussel/Caroussel"
+import Cards from "../components/cards/Cards"
 import FAQ from "../components/faq/FAQ"
 import Hero from "../components/hero/Hero"
 import Navbar from "../components/navbar/Navbar"
@@ -9,8 +9,8 @@ const Home = () =>
         <div>
             <Navbar/>
             <Hero/>
-            {/* <Caroussel/>
-            <FAQ/> */}
+            <Cards/>
+            <FAQ/>
         </div>
     )
 }

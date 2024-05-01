@@ -25,7 +25,7 @@ const FAQ = () =>
 
     return(
         <div className="qa-container">
-            <h1>FAQ</h1>
+            <h1>FAQs</h1>
             {data.map((item)=>
             (
                 <div key={item.id} className="qa">
@@ -44,6 +44,7 @@ const FAQ = () =>
                     </div>
                 </div>
             ))}
+            <div className="hr"></div>
         </div>
     )
 }

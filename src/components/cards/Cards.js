@@ -1,47 +1,53 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 import axios from "axios";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { useSwiper } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-import prev from '../../assets/prev.png'
-import next from '../../assets/next.png'
+import Section from "../section/Section";
 
-const Cards = ({ title, data, type}) =>
+const Cards= () =>
 {
-    const swiper = useSwiper();
+    const [topSongs, setTopSongs] = useState([]);
+    const [newSongs, setNewSongs] = useState([]);
+    const [songs, setSongs] = useState([]);
+    const [genre, setGenre] = useState('All');
+
+    const fetchTop = async () =>
+    {
+        const url = "https://qtify-backend-labs.crio.do/albums/top";
+        const response = await axios.get(url);
+        setTopSongs(response.data);
+    }
+
+    const fetchNew = async () =>
+    {
+        const url = "https://qtify-backend-labs.crio.do/albums/new";
+        const response = await axios.get(url);
+        setNewSongs(response.data);
+    }
+
+    const fetchSongs = async () =>
+    {
+        const url = "https://qtify-backend-labs.crio.do/songs";
+        const response = await axios.get(url);
+        setSongs(response.data);
+    }
+
+    useEffect(() =>
+    {
+        fetchTop();
+        fetchNew();
+        fetchSongs();
+    },[])
+
+    const filteredGenre = genre === 'All' ? songs : [...songs].filter((song) => song.genre.label === genre);
+    
+    console.log(genre);
 
     return(
-        <div className="container">
-            <div className="card-header">
-                <p>{title}</p>
-                <span>{title === "Songs" ? '' : 'Show All'}</span>
-            </div>
-            <Swiper spaceBetween={50} slidesPerView={8}>
-            <button className="prev navigation" onClick={() => swiper.slidePrev()}><img src={prev} alt="prev"/></button>
-            <button className="next navigation" onClick={() => swiper.slideNext()}><img src={next} alt="next"/></button>
-            <div className="swiper">
-            {data?.map((card)=>
-            (
-            <SwiperSlide key={card.id}>
-                <div className="card">
-                    <div className="card-image" >
-                        <img src={card.image} alt="songs"/>
-                    </div>
-                    <div className="card-content">
-                        {card.follows ? <button>{card.follows} Follows</button> :
-                        <button>{card.likes} Likes</button>}
-                    </div>
-                </div>
-                <p className="title">{card.title}</p>
-            </SwiperSlide>     
-            ))}
-            </div>
-            </Swiper>
+        <div>
+           <Section title="Top Albums" data={topSongs} type="album"/>
+           <Section title="New Albums" data={newSongs} type="album"/>
+           <Section title="Songs" data={filteredGenre} type="song" setGenre={setGenre}/>
         </div>
     )
 }
 
-export default Cards
+export default Cards;
