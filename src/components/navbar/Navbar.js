@@ -1,8 +1,8 @@
 import Button from "../button/Button";
-import Form from "../feedback/Form";
+// import Form from "../feedback/Form";
 import Logo from "../logo/Logo";
 import Search from "../search/Search";
-import "../Styles.css"
+import "../../Styles.css"
 
 const Navbar = () =>
 {

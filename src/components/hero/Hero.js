@@ -1,4 +1,4 @@
-import '../Styles.css';
+import '../../Styles.css';
 import hero from '../../assets/hero-image.png';
 
 const Hero = () =>

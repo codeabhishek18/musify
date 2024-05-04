@@ -1,5 +1,5 @@
 import logo from '../../assets/logo.png';
-import "../Styles.css"
+import "../../Styles.css"
 
 const Logo = () =>
 {

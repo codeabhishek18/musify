@@ -1,7 +1,7 @@
-import Cards from "../components/cards/Cards"
 import FAQ from "../components/faq/FAQ"
 import Hero from "../components/hero/Hero"
 import Navbar from "../components/navbar/Navbar"
+import SectionData from "../components/sectiondata/SectionData"
 
 const Home = () =>
 {
@@ -9,8 +9,8 @@ const Home = () =>
         <div>
             <Navbar/>
             <Hero/>
-            <Cards/>
-            {/* <FAQ/> */}
+            <SectionData/>
+            <FAQ/>
         </div>
     )
 }
