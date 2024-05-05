@@ -7,7 +7,6 @@ const SectionData = () =>
     const [topSongs, setTopSongs] = useState([]);
     const [newSongs, setNewSongs] = useState([]);
     const [songs, setSongs] = useState([]);
-    const [genre, setGenre] = useState('All');
 
     const getTopAlbums = async () =>
     {
@@ -37,13 +36,11 @@ const SectionData = () =>
         getSongs();
     },[])
 
-    const filteredGenre = genre === 'All' ? songs : [...songs].filter((song) => song.genre.label === genre);
-
     return(
         <div>
            <Section title="Top Albums" data={topSongs} type="album"/>
            <Section title="New Albums" data={newSongs} type="album"/>
-           <Section title="Songs" data={filteredGenre} type="song" setGenre={setGenre}/>
+           {/* <Section title="Songs"      data={songs}    type="song"/> */}
         </div>
     )
 }

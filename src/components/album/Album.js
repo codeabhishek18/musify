@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export const genres = [
     {
@@ -23,25 +23,22 @@ export const genres = [
     }
 ]
 
-const Album = ({type, setGenre}) =>
+const Album = ({ setSelectedGenre }) =>
 {
     const [currentActive, setCurrentActive] = useState(1);
 
     return(
-        <div>
-            {type === 'song' && <div className="genres">
-                {genres.map((data) =>
-                (
-                    <div className="genre-items">
-                        <span onClick={()=> {
-                            if(type==='song')
-                                setGenre(data.label); 
-                            setCurrentActive(data.id)}}>{data.label}
-                        </span>
-                        <span className={currentActive === data.id ? 'underline' : ''}></span>
-                    </div>
-                ))}
-            </div>}
+        <div className="genres">
+            {genres.map((data) =>
+            (
+                <div className="genre-items" key={data.id}>
+                    <span onClick={()=> {
+                        setSelectedGenre(data.label); 
+                        setCurrentActive(data.id)}}>{data.label}
+                    </span>
+                    <span className={currentActive === data.id ? 'underline' : ''}></span>
+                </div>
+            ))}
         </div>
     )
 }

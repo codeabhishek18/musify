@@ -20,9 +20,6 @@ const FAQ = () =>
     const [isClicked, setIsClicked] = useState(false);
     const[current, setCurrent] = useState(null);
 
-    console.log(isClicked);
-    console.log(current);
-
     return(
         <div className="qa-container">
             <h1>FAQs</h1>
@@ -44,7 +41,7 @@ const FAQ = () =>
                     </div>
                 </div>
             ))}
-            {/* <div className="hr"></div> */}
+            <div className="hr"></div>
         </div>
     )
 }
