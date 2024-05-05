@@ -6,7 +6,7 @@ import Cards from '../cards/Cards';
 import LeftNavigation from '../LeftNavigation/LeftNavigation';
 import RightNavigation from '../RightNavigation/RightNavigation';
 
-const Carousel = ({data}) =>
+const Carousel = ({data, type}) =>
 {
     return(
         <div className="carousel">
@@ -20,7 +20,7 @@ const Carousel = ({data}) =>
                 <RightNavigation />
                 {data?.map((card)=>
                 (
-                    <SwiperSlide key={card.id}><Cards card={card}/></SwiperSlide>
+                    <SwiperSlide key={card.id}><Cards card={card} type={type}/></SwiperSlide>
                 ))}  
             </Swiper>
         </div>

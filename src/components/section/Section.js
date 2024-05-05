@@ -21,7 +21,7 @@ const Section = ({ title, data = [], type }) =>
                 {type === 'song' && <Album setSelectedGenre={setSelectedGenre}/>}
                 { collapse ? 
                     <StackedCards data={songdata} /> :
-                    <Carousel data={songdata}/> 
+                    <Carousel data={songdata} type={type}/> 
                 }
             </div>
 
