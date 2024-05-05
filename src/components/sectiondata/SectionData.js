@@ -40,7 +40,7 @@ const SectionData = () =>
         <div>
            <Section title="Top Albums" data={topSongs} type="album"/>
            <Section title="New Albums" data={newSongs} type="album"/>
-           {/* <Section title="Songs"      data={songs}    type="song"/> */}
+           <Section title="Songs"      data={songs}    type="song"/>
         </div>
     )
 }
