@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useSwiper } from "swiper/react";
 import { useState } from "react";
-import RightArrow from '../../assets/next.png'
+import { ReactComponent as RightArrow } from '../../assets/Rightarrow.svg'
 
 const RightNavigation = () => 
 {
@@ -17,7 +17,7 @@ const RightNavigation = () =>
 
   return (
     <div>
-      {!isEnd && <button className="navigation right" onClick={() => swiper.slideNext()}><img src={RightArrow} alt="next"/></button>}
+      {!isEnd && <RightArrow className="navigation right" onClick={() => swiper.slideNext()}/>}
     </div>
   );
 };

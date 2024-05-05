@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useSwiper } from "swiper/react";
 import { useState } from "react";
-import LeftArrow from '../../assets/prev.png'
+import { ReactComponent as LeftArrow } from '../../assets/Leftarrow.svg'
 
 const LeftNavigation = () => 
 {
@@ -17,7 +17,7 @@ const LeftNavigation = () =>
 
   return (
     <div>
-      {!isBegin && <button className="navigation left" onClick={() => swiper.slidePrev()}><img src={LeftArrow} alt="next"/></button>}
+      {!isBegin && <LeftArrow className="navigation left" onClick={() => swiper.slidePrev()} />}
     </div>
   );
 };

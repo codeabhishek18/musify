@@ -36,7 +36,7 @@ const Album = ({ setSelectedGenre }) =>
                         setSelectedGenre(data.label); 
                         setCurrentActive(data.id)}}>{data.label}
                     </span>
-                    <span className={currentActive === data.id ? 'underline' : ''}></span>
+                    <span className={currentActive === data.id ? 'active' : ''}></span>
                 </div>
             ))}
         </div>
